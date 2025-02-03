@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('verify') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+          stage('clone') {
+            steps {
+              git credentialsId: 'jen-key', url: 'git@github.com:ReenaSo16/java-CICBCD.git'
+            }
+            
+        }
+          stage('build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
